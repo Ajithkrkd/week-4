@@ -10,11 +10,11 @@ class Node {
     }
 }
 
-class LinkedList {
+class singlyLinkedList {
     public Node head;
     public Node tail;
 
-    LinkedList() {
+    singlyLinkedList() {
         head = tail = null;
     }
 
@@ -129,26 +129,72 @@ class LinkedList {
         }  
     }
     //Convert array into linked list
-        public void covertArray(int []arr ,LinkedList list) {
+        public void covertArray(int []arr ,singlyLinkedList list) {
             
             for( int i : arr){
                 list.add(i);
             }
             print();
         }
-    
+
+        // Print In Reverse Oreder
+        public void printInRevers(Node data) {
+            
+            if(data.next != null){
+                printInRevers(data.next);
+            }
+            System.out.print(data.val+" -> ");
+        }
+        //Deleting Duplicate Elements
+        public void removeDuplicate(){
+            Node temp = head,next;
+            
+        if(head == null){
+            return;
+           }
+           while(temp.next != null){
+
+                next = temp.next;
+
+                if(temp.val == next.val){
+                    temp.next = next.next;
+                    next.next = null;
+                }else{
+                    temp = temp.next;
+                }
+           }
+        }
+        public boolean contain(int val) {
+            Node temp;
+            temp = head;
+            while(temp != null){
+                if(temp.val == val){
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return false;
+        }
     }
 
 // main class contain main Function
 public class Main {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        System.out.println("\n\n");
-        int [] arr = new int[] {1,2,100,4,5,6};
-        list.covertArray(arr, list);
+        singlyLinkedList list = new singlyLinkedList();
+        //use this object and access all function
+        //add
+        //removeFirst
+        //removelast
+        //addFirst
+        //addLAst
+        //addBefore
+        //addAfter
+        //contain
+        //removeDuplicate
+        //print
+        //printInReverse
+        //covertArray
 
-
-         System.out.println("\n\n");
        
     }
 }
