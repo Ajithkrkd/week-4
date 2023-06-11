@@ -1,5 +1,6 @@
+import doublyLinkedList.Node;
 
-
+package singlyLinkedList;
 class Node {
     public int val;
     public Node next;
@@ -17,6 +18,20 @@ class singlyLinkedList {
     singlyLinkedList() {
         head = tail = null;
     }
+        // Adding the Element in last position
+   public void addEnd(int val)
+	{
+		Node node = new Node(val);
+		
+		if (tail == null)
+		{
+			head = tail = node;
+		} else {
+			tail.next = node;
+			tail = node;
+		}
+	}
+
 
     // print all elements in the linked list
     public void print() {
@@ -62,19 +77,6 @@ class singlyLinkedList {
         }
     }
 
-    // Adding the Element in last position
-   public void addEnd(int val)
-	{
-		Node node = new Node(val);
-		
-		if (head == null)
-		{
-			head = tail = node;
-		} else {
-			tail.next = node;
-			tail = node;
-		}
-	}
 
     public void addBefore(int val, int value) {
         Node node = new Node(value);
@@ -181,6 +183,14 @@ class singlyLinkedList {
 public class Main {
     public static void main(String[] args) {
         singlyLinkedList list = new singlyLinkedList();
+        list.addEnd(45);
+        list.add(6);
+        list.add(5);
+        list.add(4);
+        list.add(4);
+        list.add(4);
+       list.removeDuplicate();
+         list.print();
         //use this object and access all function
         //add
         //removeFirst
