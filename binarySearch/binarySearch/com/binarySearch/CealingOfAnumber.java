@@ -1,8 +1,8 @@
 
 public class CealingOfAnumber {
     public static void main(String[] args) {
-        int [] arr = new int[]{1,2,3,4,6};
-      System.out.println(cealing(arr, 6));  
+        int [] arr = new int[]{1,2,3,5,6};
+      System.out.println(cealing(arr, 4));  
     }
     public static int cealing(int [] arr ,int target){
         int start = 0;

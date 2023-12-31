@@ -1,4 +1,5 @@
-public class Demo {
+package recursion;
+public class SumOfNAtural {
     public static void main(String[] args) {
         System.out.println(sumOfNAtural(3));
         

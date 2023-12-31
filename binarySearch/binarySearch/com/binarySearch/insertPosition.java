@@ -3,7 +3,7 @@
 
 public class insertPosition {
     public static void main(String[] args) {
-        int [] arr = new int []{1,3,4,5,};
+        int [] arr = new int []{1,3,4,5};
         
         System.out.println(searchInsert(arr,2));
     }

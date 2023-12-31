@@ -1,4 +1,5 @@
-public class Demo {
+package recursion;
+public class FactorialOfNumber {
 
     public static void main(String[] args) {
         System.out.println(factorialOfNumber(5));
